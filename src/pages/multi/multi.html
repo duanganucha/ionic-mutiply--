@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>สูตรคูณ เลือกช่วง</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label floating>ใส่แม่แรก</ion-label>
+          <ion-input type="number" [(ngModel)]="num1"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+
+        <ion-item>
+          <ion-label floating>ถึง</ion-label>
+          <ion-input type="number" [(ngModel)]="num2"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="danger" (click)="cal()">คำนวน</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <!-- <ul> -->
+  <ion-card *ngFor="let item of strArrayBig ;let i = index;">
+    <ion-item-divider color="light">สูตรคูณแม่ : </ion-item-divider>
+    <li *ngFor="let c of item">
+      {{ c }}
+    </li>
+  </ion-card>
+  <!-- </ul> -->
+
+</ion-content>
